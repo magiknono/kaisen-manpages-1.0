@@ -1,0 +1,27 @@
+#!/bin/sh
+# postrm script for kaisen-manpages
+#
+# see: dh_installdeb(1)
+
+set -e
+
+case "$1" in
+    purge|remove|upgrade|failed-upgrade|abort-install|abort-upgrade|disappear)
+    find /usr/share/kaisen-manpages -delete > /dev/null 2>&1 || true
+    rm -f /etc/apache2/sites-available/kaisen-manpages.conf 2>/dev/null || true
+    rm -f /etc/apache2/sites-enabled/kaisen-manpages.conf 2>/dev/null || true  
+    rm -f /usr/share/applications/kaisenmanpages.desktop 2>/dev/null || true
+    
+    # rm -f /usr/share/applications/kaisenapache2-* 2>/dev/null || true
+    # rm -f /usr/share/applications/desktop-directories/kaisenlinux-sapache2.directory 2>/dev/null || true
+    # rm -f /opt/services/apache2-* 2>/dev/null || true
+    ;;
+
+    *)
+        echo "postrm called with unknown argument \`$1'" >&2
+        exit 1
+    ;;
+esac
+
+#DEBHELPER#
+exit 0

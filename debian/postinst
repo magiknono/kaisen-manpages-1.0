@@ -1,0 +1,19 @@
+#!/bin/env bash
+# postinst script for kaisen-manpages
+
+set -e
+
+
+# cp /usr/share/kaisen-manpages/*.directory /usr/share/desktop-directories/
+# cp /usr/share/kaisen-manpages/apache2-* /opt/services/
+# cp /usr/share/kaisen-manpages/kaisenapache2-* /usr/share/applications/
+cp /usr/share/kaisen-manpages/kaisenmanpages.desktop /usr/share/applications/
+
+cp /usr/share/kaisen-manpages/vhost/kaisen-manpages.conf /etc/apache2/sites-available/kaisen-manpages.conf
+ln -s /etc/apache2/sites-available/kaisen-manpages.conf /etc/apache2/sites-enabled/kaisen-manpages.conf
+rm -f /etc/apache2/sites-enabled/000-default.conf
+echo -e " \033[0;32mBrowse the manpages with your web browser at url: http://localhost/manpages/\033[0m"
+
+#DEBHELPER#
+systemctl restart apache2
+exit 0

@@ -1,0 +1,16 @@
+Source: kaisen-manpages
+Section: kaisen-packages
+Priority: optional
+Maintainer: Arnaud Cormier - Magiknono <magiknono@kaisen-linux.org>
+Build-Depends: debhelper-compat (= 13)
+Standards-Version: 4.5.1
+Homepage: https://manpages.kaisen-linux.org
+Vcs-Browser: https://gitlab.com/kaisenlinux/packages/kaisen-manpages
+Vcs-Git: https://gitlab.com/kaisenlinux/packages/kaisen-manpages.git
+Rules-Requires-Root: no
+
+Package: kaisen-manpages
+Architecture: all
+Depends: apache2
+Description: Offline documentation from manpages.kaisen-linux.org
+ Kaisen manpages on http://localhost/manpages served by apache2
