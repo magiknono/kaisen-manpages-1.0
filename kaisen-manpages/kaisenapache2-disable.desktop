@@ -1,0 +1,22 @@
+#!/usr/bin/env xdg-open
+
+[Desktop Entry]
+Name=apache2-disable
+Name[fr]=apache2-désactivé
+Name[es]=apache2-deshabilitado
+Name[pt]=apache2-desativado
+Name[it]=apache2-disabilitato
+Name[de]=apache2-deaktiviert
+Comment=Disable apache2 daemon
+Comment[fr]=Désactiver service apache2
+Comment[es]=Deshabilitar servicio apache2
+Comment[pt]=Desativar serviço apache2
+Comment[it]=Disabilita servizio apache2
+Comment[de]=Deaktivieren Sie den apache2-Dienst
+Exec=kaisen-launcher --command "/opt/services/apache2-disable" --sudo
+Icon=utilities-terminal
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=SApache2
+X-Kaisen-Package=kaisen-manpages

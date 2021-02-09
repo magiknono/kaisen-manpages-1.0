@@ -1,0 +1,13 @@
+#!/usr/bin/env xdg-open
+
+[Desktop Entry]
+Name=Kaisen-manpages
+Comment=Kaisen-manpages
+Comment[fr]=Kaisen-manpages
+Exec=kaisen-launcher --command "firefox http://localhost/manpages"
+Icon=utilities-terminal
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=Miscellaneous
+X-Kaisen-Package=kaisen-manpages

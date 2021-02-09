@@ -1,0 +1,22 @@
+#!/usr/bin/env xdg-open
+
+[Desktop Entry]
+Name=apache2
+Name[fr]=apache2-activé
+Name[es]=apache2-activado
+Name[pt]=apache2-ativado
+Name[it]=apache2-abilitato
+Name[de]=apache2-aktiviert
+Comment=Enable apache2 daemon
+Comment[fr]=Activer service apache2
+Comment[es]=Activar servicio apache2
+Comment[pt]=Ativar serviço apache2
+Comment[it]=Attiva servizio apache2
+Comment[de]=Aktivieren Sie den apache2-Dienst
+Exec=kaisen-launcher --command "/opt/services/apache2-enable" --sudo
+Icon=utilities-terminal
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=SApache2
+X-Kaisen-Package=kaisen-manpages
